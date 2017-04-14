@@ -1,0 +1,23 @@
+/* Slider */
+@import "../node_modules/slick-carousel/slick/slick.scss";
+
+/*Common*/
+@import "common/sprite";
+@import "common/variables";
+@import "common/mixins";
+@import "common/common";
+
+/*Components*/
+@import "components/map";
+@import "components/components.hamburger";
+@import "components/slider";
+@import "components/components.scrollTo";
+@import "components/breadcrumbs";
+
+
+@import "header";
+@import "nav";
+@import "main";
+@import "aside";
+@import "footer";
+@import "forms";

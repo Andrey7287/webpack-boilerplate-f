@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:400,500,700" rel="stylesheet">
+	<link rel="shortcut icon" href="./favicon.ico">
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container">
+			<nav class="site-nav-outer">
+				<button class="c-hamburger c-hamburger--htx">
+					<span>toggle menu</span>
+				</button>
+				<!-- Site menu data -->
+				<%
+					var menuItems = [
+						{'О&nbsp;компании': './#about'},
+						{'Услуги': './inner1.html'},
+						{'Сотрудничество': './inner2.html'},
+						{'Карьера': './inner3.html'},
+						{'Пресс-центр': './inner4.html' },
+						{'Контакты': './inner5.html' }
+					]
+				%>
+				<!-- Site menu template -->
+				<ul class="site-nav">
+				<%	menuItems.forEach((item, idx)=>{
+							for (key in item) { %>
+								<li class="site-nav__item<% if(!idx){ %> site-nav__item_act<%}%>">
+									<a href="<%=item[key] %>">
+										<%=key %>
+									</a>
+								</li>
+							<%	}
+						});	%>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- HEADER end-->
+
+	<div class="content">
+		<div class="slider-wrapp">
+			<div class="slider">
+				<div class="slider__item">
+					<img src="images/slider1.jpg" alt="">
+				</div>
+				<div class="slider__item">
+					<img src="images/slider2.jpg" alt="">
+				</div>
+			</div>
+			<button class="slider-arrow left">previos</button>
+			<button class="slider-arrow right">next</button>
+			<div class="slider-dots"></div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="copyright">© А.Аспект. Агентство стратегического развития бизнеса. 2017</div>
+				</div>
+				<div class="col">
+					<div class="infodisign">
+						<a href="http://infodesign.ru/">© Создание сайта <span class="cut">и дизайн</span> «ИнфоДизайн» 2017</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<button href="#" class="scrollup">Наверх</button>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+.site-nav{
+	display: flex;
+	@include mq(md){
+		flex-direction: column;
+		display: none;
+	}
+	&__item {
+		flex-grow: 1;
+		a {
+			display: inline-block;
+		}
+	}
+}

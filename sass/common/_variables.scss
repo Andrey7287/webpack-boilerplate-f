@@ -1,0 +1,41 @@
+/* Container */
+$container-widths: (
+	lg: 960px,
+	md: 720px,
+	sm: 540px,
+	xs: auto
+)!default;
+
+$breakpoint-widths: (
+	lg: 1200px,
+	md: 992px,
+	sm: 768px,
+	xs: 576px
+)!default;
+
+
+/* Fonts */
+$open: 'Open Sans', sans-serif;
+$roboto-c: 'Roboto Condensed', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+$default-font: $open;
+$base-font-size: 16;
+$base-line-height: 30;
+$default-color: #333;
+
+$header: #112854;
+
+/* Colors */
+$red: #bd0112;
+$grey: #555;
+$menu: #2c66d3;
+$bkg-footer: #4f699b;
+
+/* Links */
+$link: $red;
+$link-hov: $red;
+
+/* Components */
+$c-humburger-color: $menu;
+$scroll-up-color: $menu;
