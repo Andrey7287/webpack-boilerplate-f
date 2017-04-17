@@ -1,11 +1,4 @@
-/* Container */
-$container-widths: (
-	lg: 960px,
-	md: 720px,
-	sm: 540px,
-	xs: auto
-)!default;
-
+/* Media queries */
 $breakpoint-widths: (
 	lg: 1200px,
 	md: 992px,
@@ -13,6 +6,13 @@ $breakpoint-widths: (
 	xs: 576px
 )!default;
 
+/* Container */
+$container-widths: (
+	lg: 960px,
+	md: 720px,
+	sm: 540px,
+	xs: auto
+)!default;
 
 /* Fonts */
 $open: 'Open Sans', sans-serif;

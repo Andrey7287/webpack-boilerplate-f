@@ -1,24 +1,4 @@
-$breakpoint-widths: (
-	lg: 1200px,
-	md: 992px,
-	sm: 768px,
-	xs: 576px
-)!default;
-
 @mixin mq($point) {
-	/* @if $point == lg {
-		@media (max-width: $lg) { @content; }
-	}
-	@if $point == md {
-		@media (max-width: $md) { @content; }
-	}
-	@if $point == sm {
-	@media (max-width: $sm) { @content; }
-	}
-	@if $point == xs {
-		@media (max-width: $xs) { @content; }
-	}*/
-
 	@each $breakpoint, $widths in $breakpoint-widths {
 		@if $point == $breakpoint {
 			@media (max-width: $widths) { @content; }

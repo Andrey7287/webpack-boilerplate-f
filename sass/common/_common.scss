@@ -32,12 +32,19 @@ body {
 
 .container {
 	margin: 0 auto;
-	padding: 0 30px;
+	padding: 0 15px;
 	width: 1140px;
 	@each $container, $width in $container-widths {
 		@include mq(#{$container}){
 			width: $width;
 		}
+	}
+	.row {
+		margin: 0 -15px;
+	}
+	.col {
+		//1 col = 8.33333%
+		padding: 0 15px;
 	}
 }
 
