@@ -1,44 +1,59 @@
 
 .slider-wrapp {
 	position: relative;
-	max-width: 1200px;
-	margin: 0 auto;
 }
 /**** SLIDER ****/
 .slider {
 	&__item {
 		position: relative;
+		min-height: 435px;
+		@include mq(md) {
+			min-height: 380px;
+		}
 	}
+	&__img {
+		position: absolute;
+		top:0;
+		right: 0;
+		bottom: 0;
+		left:0;
+		max-width: inherit;
+		margin: auto;
+	}
+	&__inner {
+		display: flex;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		flex-direction: column;
+		justify-content: center;
+	}
+	&__txt {
+		color: #fff;
+		padding: 15px;
+		text-align: right;
+		.title {
+
+		}
+		.txt {
+
+		}
+	}
+
 }
-/**** ARROWS ****/
-.slider-arrow {
+.slider-dots {
+	width: 40%;
 	position: absolute;
-	text-indent: -99999px;
-	padding: 0;
-	border: 0;
-	line-height: 0;
-	top: calc(50% - 26px);
-	background-color: transparent;
-	&:hover {
-		cursor: pointer;
-	}
-	&.left {
-		left: 13px;
-		@include sprite($arrow_left);
-	}
-	&.right {
-		right: 13px;
-		@include sprite($arrow_right);
+	right: 0;
+	bottom: 60px;
+	@include mq(md) {
+		width: 50%;
+		bottom: 40px;
 	}
 }
 /**** DOTS ****/
-.slider-dots {
-	position: absolute;
-	bottom: 15px;
-	left: 0;
-	right: 0;
-	text-align: center;
-}
 .slick-dots {
 	margin: 0;
 	padding: 0;
@@ -68,4 +83,24 @@
 
 }
 
-
+/**** ARROWS ****/
+.slider-arrow {
+	position: absolute;
+	text-indent: -99999px;
+	padding: 0;
+	border: 0;
+	line-height: 0;
+	top: calc(50% - 26px);
+	background-color: transparent;
+	&:hover {
+		cursor: pointer;
+	}
+	&.left {
+		left: 13px;
+		@include sprite($arrow_left);
+	}
+	&.right {
+		right: 13px;
+		@include sprite($arrow_right);
+	}
+}

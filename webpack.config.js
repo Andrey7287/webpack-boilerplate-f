@@ -5,12 +5,11 @@ const webpack = require('webpack'),
 	SpritesmithPlugin = require('webpack-spritesmith'),
 	nodeEnv = process.env.NODE_ENV || 'development',
 	isProd = nodeEnv === 'production',
-	outputPath = 'js/',
 	innerPages = 2,
 	pages = ['index'];
 
 const extractCSS = new ExtractTextPlugin({
-	filename: '../style.css',
+	filename: 'sass/style.css',
 	disable: !isProd,
 	allChunks: true
 });
@@ -52,8 +51,8 @@ pages.forEach((val) => {
 		new HtmlWebpackPlugin({
 			template: `./frontend/${val}.ejs`,
 			title: `${val}`,
-			inject: true,
-			filename: isProd ? `../${val}.html` : `${val}.html`,
+			inject:true,
+			filename: `${val}.html`
 		})
 	);
 
@@ -97,10 +96,9 @@ module.exports = {
 		bundle: ['./frontend/main']
 	},
 	output: {
-		path: path.resolve(__dirname, outputPath),
-		publicPath: isProd ? outputPath : '',
-		filename: '[name].js',
-		chunkFilename: 'chunk.[id].js'
+		path: path.resolve(__dirname),
+		publicPath: '',
+		filename: isProd ? 'js/[name].js' : '[name].js'
 	},
 	module: {
 		noParse: /jquery/,
@@ -146,12 +144,22 @@ module.exports = {
 				}
 
 			}, {
-				test: /\.(gif|png|jpg|jpeg\ttf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+				test: /\.(gif|png|jpg|jpeg|svg)(\?[a-z0-9]+)?$/,
 				use: [
 					{
 						loader: 'file-loader',
 						query: {
 							name: isProd ? '../images/[name].[ext]' : './images/[name].[ext]'
+						}
+					}
+				]
+			}, {
+				test:  /\.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
+				use: [
+					{
+						loader: 'file-loader',
+						query: {
+							name: isProd ? '../fonts/[name].[ext]' : './fonts/[name].[ext]'
 						}
 					}
 				]

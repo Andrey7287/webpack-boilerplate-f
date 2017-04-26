@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:400,500,700" rel="stylesheet">
 	<link rel="shortcut icon" href="./favicon.ico">
 </head>
 
@@ -46,30 +44,42 @@
 	<!-- HEADER end-->
 
 	<div class="content">
+
+		<!-- SLIDER-->
 		<div class="slider-wrapp">
 			<div class="slider">
-				<div class="slider__item">
-					<img src="images/slider1.jpg" alt="">
-				</div>
-				<div class="slider__item">
-					<img src="images/slider2.jpg" alt="">
-				</div>
+				<% for (var i = 1; i < 3; i++){%>
+					<div class="slider__item">
+						<img class="slider__img" src="images/slider<%=i %>.jpg" alt="" />
+						<div class="slider__inner">
+							<div class="slider__txt">
+								<div class="title">
+									Title
+								</div>
+								<div class="txt">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi suscipit reiciendis numquam deserunt, dolore officiis nisi unde, placeat iste.
+								</div>
+							</div>
+						</div>
+					</div>
+					<% } %>
 			</div>
 			<button class="slider-arrow left">previos</button>
 			<button class="slider-arrow right">next</button>
 			<div class="slider-dots"></div>
 		</div>
+
 	</div>
 
 	<footer class="footer">
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<div class="copyright">© А.Аспект. Агентство стратегического развития бизнеса. 2017</div>
+					<div class="copyright">© Lorem ipsum dolor sit amet, consectetur adipisicing elit. 2017</div>
 				</div>
 				<div class="col">
 					<div class="infodisign">
-						<a href="http://infodesign.ru/">© Создание сайта <span class="cut">и дизайн</span> «ИнфоДизайн» 2017</a>
+						<a href="http://infodesign.ru/">© Создание сайта и дизайн «ИнфоДизайн» 2017</a>
 					</div>
 				</div>
 			</div>

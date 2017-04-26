@@ -8,11 +8,13 @@ $breakpoint-widths: (
 
 /* Container */
 $container-widths: (
-	lg: 960px,
-	md: 720px,
-	sm: 540px,
+	lg: 900px,
+	md: 750px,
+	sm: 558px,
 	xs: auto
 )!default;
+
+$gutter: 15px;
 
 /* Fonts */
 $open: 'Open Sans', sans-serif;

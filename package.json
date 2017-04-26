@@ -33,7 +33,6 @@
 	},
 	"dependencies": {
 		"jquery": "^3.1.1",
-		"modularized-normalize-scss": "^4.0.0",
 		"slick-carousel": "^1.6.0"
 	}
 }
