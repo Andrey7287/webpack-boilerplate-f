@@ -95,11 +95,11 @@
 	&:hover {
 		cursor: pointer;
 	}
-	&.left {
+	&:first-of-type {
 		left: 13px;
 		@include sprite($arrow_left);
 	}
-	&.right {
+	&:last-of-type {
 		right: 13px;
 		@include sprite($arrow_right);
 	}

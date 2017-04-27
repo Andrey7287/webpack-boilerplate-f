@@ -31,11 +31,11 @@ $('.c-hamburger').on('click', function(){
 ******** SLIDER ********
 ************************/
 
-$('.slider').slick({
-	prevArrow: $('.slider-arrow.left'),
-	nextArrow: $('.slider-arrow.right'),
+$('.js-slider-1').slick({
+	prevArrow: $('.js-slider-1-left'),
+	nextArrow: $('.js-slider-1-right'),
 	dots: true,
-	appendDots: $('.slider-dots')
+	appendDots: $('.js-slider-1-dots')
 });
 
 /************************
