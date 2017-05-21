@@ -1,8 +1,9 @@
 
 .scrollup {
 	position: fixed;
-	text-indent: -9999px;
-	z-index: 10;
+	font-size: 0;
+	padding: 0;
+	z-index: 100;
 	right: -9999px;
 	bottom: 35px;
 	width: 36px;
@@ -11,21 +12,18 @@
 	border-radius: 50%;
 	cursor: pointer;
 	opacity: 0;
-	transition: all 0.2s ease-out;
-	outline: none;
+	transition: opacity .3s ease-out;
 	&::before {
-		content: '\23F6';
-		display: inline-block;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin-left: -10px;
-		margin-top: -16px;
-		width: 16px;
-		height: 22px;
+		content: " ";
+		display: block;
 		color: $scroll-up-color;
-		font-size: 22px;
-		text-indent: 0;
+		width: 0;
+		height: 0;
+		border-left: 8px solid transparent;
+		border-right: 8px solid transparent;
+		border-bottom: 10px solid $scroll-up-color;
+		margin: 9px auto;
+		transition: border-bottom .3s ease-out;
 	}
 	&.act {
 		right: 20px;
@@ -38,7 +36,7 @@
 	}
 	&:hover {
 		&::before {
-			color: #fff;
+			border-bottom: 10px solid #fff;
 		}
 	}
 }

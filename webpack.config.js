@@ -177,7 +177,7 @@ module.exports = {
 	devServer: {
 		open: true,
 		historyApiFallback: true,
-		port: 3000,
+		port: 4000,
 		hot: true,
 		stats: {
 			colors: true
