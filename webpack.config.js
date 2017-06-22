@@ -49,7 +49,7 @@ pages.forEach((val) => {
 
 	plugins.push(
 		new HtmlWebpackPlugin({
-			template: `./frontend/${val}.ejs`,
+			template: `./frontend/${val}.pug`,
 			title: `${val}`,
 			inject:true,
 			filename: `${val}.html`
@@ -111,6 +111,13 @@ module.exports = {
 						name: '[name].[ext]'
 					}
 				}
+			}, {
+				test: /\.pug$/,
+				use: [{
+					loader: 'html-loader'
+				},{
+					loader: 'pug-html-loader'
+				}]
 			}, {
 				test: /\.scss$/,
 				use: extractCSS.extract({

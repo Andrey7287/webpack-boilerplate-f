@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    title= 'no title'
+  body
+    header
+      nav
+        ul
+          each link, name in {'home': '/', 'about': '/inner1', 'contacts': '/inner2.html'}
+            li
+              a(href=link)= name 
+    main
+      block content
+    footer
+      div.footer
+        div.copyright= 'all right resived'
