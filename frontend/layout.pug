@@ -1,14 +1,52 @@
 doctype html
 html
+  include ./mixins/menu.pug
   head
     title= 'no title'
   body
     header
-      nav
-        ul
-          each link, name in {'home': '/', 'about': '/inner1', 'contacts': '/inner2.html'}
-            li
-              a(href=link)= name 
+      .site-nav-outer
+        .container
+          nav.site-nav-inner
+            button
+            +menu({
+              0: {
+                href: '/',
+                title: 'О Компании'
+              },
+              1: {
+                href: '/inner1.html',
+                title: 'Название'
+              },     
+              2: {
+                href: '/inner2.html',
+                title: 'Название2',
+                sub: {
+                  0: {
+                    href: '#',
+                    title: 'в подменю'
+                  },
+                  1: {
+                    href: '#',
+                    title: 'в подменю 2'
+                  },
+                  2: {
+                    href: '#',
+                    title: 'в подменю 3',
+                    sub: {
+                      0: {
+                        href: '#',
+                        title: '3 уровень'
+                      },
+                      1: {
+                        href: '#',
+                        title: '3 уровень'
+                      }
+                    }
+                  }
+                }
+              }     
+            }, 'site-nav')
     main
       block content
     footer
