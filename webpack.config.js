@@ -49,7 +49,7 @@ pages.forEach((val) => {
 
 	plugins.push(
 		new HtmlWebpackPlugin({
-			template: `./frontend/${val}.pug`,
+			template: `./${val}.pug`,
 			title: `${val}`,
 			inject:true,
 			filename: `${val}.html`

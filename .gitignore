@@ -6,3 +6,8 @@ static
 coverage
 __nogit
 .idea
+.vscode
+js
+*.html*
+*.css*
+*.css.map*

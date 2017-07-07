@@ -7,14 +7,14 @@ window.jQuery = $;
 
 /* Import project styles and components */
 require('script-loader!slick-carousel');
-require('./modules/ymap');
+import './modules/ymap';
 import '../sass/css.scss';
 import OnResize from './modules/resize';
 import scrollup from './modules/scrollup';
 
 /* Define project components and variables */
 var	mobileView = window.matchMedia("(max-width: 768px)").matches,
-		resizeAlign = new OnResize,
+		resizeAlign = new OnResize(),
 		scrollTiming = 0;
 
 /************************

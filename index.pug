@@ -1,0 +1,12 @@
+extends layout 
+
+block content
+  .slider-wrapp
+    .slider.js-slider-1
+      each val in [1,2]
+        .slider__item
+          .slider__inner
+          img(src="./images/slider"+val+".jpg", alt="")
+    button.slider-arrow.js-slider-1-left previos
+    button.slider-arrow.js-slider-1-right next
+    .slider-dots.js-slider-1-dots

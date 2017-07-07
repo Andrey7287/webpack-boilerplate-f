@@ -1,0 +1,21 @@
+@mixin list($font-size: $base-font-size, $line-height: $base-line-height, $color: $default-color) {
+  margin: 7px 0 15px;
+	padding: 0;
+	list-style: none;
+	li {
+		@include font($font-size,$line-height);
+		padding: 5px 0 5px 28px;
+		position: relative;
+		line-height: 1.25em;
+		&::before{
+			content: " ";
+			display: block;
+			width: 22px;
+			height: 1px;
+			background-color: $color;
+			position: absolute;
+			left: 0;
+			top: 0.9em;
+		}
+	}
+}

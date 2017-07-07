@@ -2,13 +2,20 @@ doctype html
 html
   include ./mixins/menu.pug
   head
-    title= 'no title'
+    title= 'title'
+    meta(name="viewport", content="initial-scale=1.0, width=device-width")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="cmsmagazine" content="849adf88a19b6cd917ad2f593e243b3a")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=PT+Serif:400,700")
+    link(rel="shortcut icon", href="./favicon.ico")
   body
-    header
+    header.header
       .site-nav-outer
         .container
           nav.site-nav-inner
-            button
+            button.c-hamburger.c-hamburger--htx
+              span toggle menu
             +menu({
               0: {
                 href: '/',

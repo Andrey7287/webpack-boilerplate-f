@@ -1,0 +1,117 @@
+// Headers
+
+h1, .h1 {
+	@include font(48,52,400,$serif);
+	text-transform: uppercase;
+	text-align: center;
+	margin: 22px 0;
+	color: $header;
+	@include mq(lg){
+		@include font(46,50,400,$serif);
+		margin: 18px 0;
+	}
+	@include mq(md){
+		@include font(42,46,400,$serif);
+	}
+	@include mq(sm){
+		@include font(38,42,400,$serif);
+		margin: 10px 0;
+	}
+	@include mq(xs){
+		@include font(34,38,400,$serif);
+	}
+}
+h2, .h2 {
+	@include font(36,38,400,$serif);
+	text-transform: uppercase;
+	color: $header;
+	margin: 22px 0;
+	@include mq(md){
+		@include font(34,36,400,$serif);
+		margin: 18px 0;
+	}
+	@include mq(sm){
+		@include font(30,32,400,$serif);
+	}
+	@include mq(xs){
+		@include font(26,28,400,$serif);
+	}
+}
+h3, .h3 {
+	@include font(30,32,400,$serif);
+	text-transform: uppercase;
+	color: $header;
+	margin: 13px 0;
+	@include mq(md){
+		@include font(28,30,400,$serif);
+		margin: 8px 0;
+	}
+	@include mq(sm){
+		@include font(26,28,400,$serif);
+		margin: 6px 0;
+	}
+}
+h4, .h4 {
+	@include font(20,24,700,$serif);
+	text-transform: uppercase;
+	color: $header;
+	margin: 13px 0;
+	@include mq(lg){
+		br {display: none}
+	}
+	@include mq(sm){
+		@include font(18,22,400,$serif);
+		margin: 6px 0;
+	}
+}
+
+.content {
+  ul {
+    @include list;
+  }
+  & > *:first-child{
+		margin-top: 0;
+	}
+}
+
+.table {
+	th {
+		background: #ededed;
+	}
+	td, th {
+		padding: 10px;
+		vertical-align: top;
+		border: 1px solid #ccc;
+	}
+	@include mq(sm) {
+		display: block;
+		thead, tbody, th, td, tr {
+			display: block;
+		}
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+		tr { border: 1px solid #ccc; }
+		td {
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+			&::before {
+				position: absolute;
+				top: 11px;
+				left: 6px;
+				width: 45%;
+				padding-right: 10px;
+				white-space: nowrap;
+				content: attr(data-head);
+			}
+		}
+	}
+}
+
+.btn {
+  text-decoration: none;
+}
