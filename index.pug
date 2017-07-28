@@ -1,12 +1,16 @@
 extends layout 
 
 block content
-  .slider-wrapp
-    .slider.js-slider-1
-      each val in [1,2]
-        .slider__item
-          .slider__inner
-          img(src="./images/slider"+val+".jpg", alt="")
-    button.slider-arrow.js-slider-1-left previos
-    button.slider-arrow.js-slider-1-right next
-    .slider-dots.js-slider-1-dots
+
+  .container
+    .slider-wrapp
+      .slider.js-slider-1
+        each val in [1,2]
+          .slider__item
+            .slider__inner
+            img(src="./images/slider"+val+".jpg", alt="")
+      button.slider-arrow.js-slider-1-left previos
+      button.slider-arrow.js-slider-1-right next
+      .slider-dots.js-slider-1-dots
+  .test-block
+    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus nam, ipsum animi, sit earum labore veniam harum ullam deserunt consectetur dignissimos voluptates vel blanditiis, nemo dolor, libero perspiciatis natus culpa.

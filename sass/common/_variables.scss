@@ -1,3 +1,6 @@
+/* Fonts import */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif:400,700');
 /* Media queries */
 $breakpoint-widths: (
 	lg: 1200px,
@@ -23,20 +26,18 @@ $serif: 'PT Serif', serif;
 $default-font: $open;
 $base-font-size: 16;
 $base-line-height: 26;
-$default-color: #333;
-
-$header: #112854;
 
 /* Colors */
-$red: #bd0112;
-$grey: #555;
-$menu: #2c66d3;
-$bkg-footer: #4f699b;
+$default-color: #333;
+$orange: #f1501d;
+$blue: #007fa0;
+$grey: #777;
+$header: $default-color;
 
 /* Links */
-$link: $red;
-$link-hov: $red;
+$link: $orange;
+$link-hov: $orange;
 
 /* Components */
-$c-humburger-color: $menu;
-$scroll-up-color: $menu;
+$c-humburger-color: $orange;
+$scroll-up-color: $orange;

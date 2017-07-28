@@ -7,6 +7,7 @@ window.jQuery = $;
 
 /* Import project styles and components */
 require('script-loader!slick-carousel');
+import 'es6-promise/auto';
 import './modules/ymap';
 import '../sass/css.scss';
 import OnResize from './modules/resize';
@@ -23,7 +24,8 @@ var	mobileView = window.matchMedia("(max-width: 768px)").matches,
 
 $('.c-hamburger').on('click', function(){
 	$(this).toggleClass('is-active');
-	$('.site-nav').slideToggle();
+	//$('.site-nav').slideToggle();
+	$('.site-nav').toggleClass('act');
 });
 
 

@@ -1,13 +1,8 @@
 @mixin font($size: $base-font-size, $height: $base-line-height, $weight: 400, $font: $default-font, $context: $base-font-size){
 
+	font-size: $size/$context + em;
+	line-height: $height/$size;
 	font-weight: $weight;
-
-	$this: $size/$context;
-
-	font-size: $this + em;
-	@if $size > 0 {
-		line-height: $height/$size + em;
-	} @else { line-height: 0; }
 	font-family: $font;
 
 }

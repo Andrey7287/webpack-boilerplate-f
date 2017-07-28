@@ -90,7 +90,8 @@
 	padding: 0;
 	border: 0;
 	line-height: 0;
-	top: calc(50% - 26px);
+	top: 50%;
+	transform: translateY(-50%);
 	background-color: transparent;
 	&:hover {
 		cursor: pointer;

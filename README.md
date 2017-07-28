@@ -7,11 +7,9 @@
 
 ## Features
 
-- [x] Tree shaking
 - [x] Code Splitting
-- [x] Hot Module Replacement
 - [x] ES-2015
-- [x] ejs
+- [x] pug
 - [x] SCSS + postCSS
 - [x] Sprites compiling
 

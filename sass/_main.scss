@@ -65,13 +65,23 @@ h4, .h4 {
 	}
 }
 
+p {
+	@include mq(sm){
+		font-size: 0.95em;
+	}
+	@include mq(xs){
+		font-size: 0.9em;
+	}
+}
+
+.btn {
+  text-decoration: none;
+}
+
 .content {
   ul {
     @include list;
   }
-  & > *:first-child{
-		margin-top: 0;
-	}
 }
 
 .table {
@@ -110,8 +120,4 @@ h4, .h4 {
 			}
 		}
 	}
-}
-
-.btn {
-  text-decoration: none;
 }

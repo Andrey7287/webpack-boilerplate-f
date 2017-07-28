@@ -1,8 +1,8 @@
 {
   "name": "webpack-boilerplate-flex",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": false,
-  "description": "webpack 2 boilerplate with HTR",
+  "description": "webpack 2 boilerplate for flexbox",
   "author": "Andrei Alekseev",
   "main": "main.js",
   "scripts": {

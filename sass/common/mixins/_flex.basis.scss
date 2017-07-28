@@ -1,0 +1,4 @@
+@mixin basis($basis){
+  flex-basis: $basis;
+	-ms-flex-preferred-size: calc(#{$basis} - #{2*$gutter});
+}

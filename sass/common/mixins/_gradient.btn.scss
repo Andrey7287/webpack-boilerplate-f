@@ -1,0 +1,72 @@
+@mixin gBtn($direction, $color1, $color2){
+	border: 0;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	background-image: linear-gradient(to $direction, $color1 0%, $color2 51%, $color1 100%);
+	background-size: 100% 200%;
+	transition: background-position .2s ease-in-out;
+
+	text-align: center;
+	&:hover,
+	&:focus,
+	&:active {
+		color: #fff;
+		background-position: $direction center;
+	}
+}
+
+@mixin gbBtn($direction, $color1, $color2) {
+	text-decoration: none;
+	text-transform: uppercase;
+	position: relative;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	//text-fill-color: transparent;
+	display: block;
+	@include gBtn(bottom, $color1, $color2);
+	font-weight: 700;
+	border-top: 3px solid $color1;
+	border-bottom: 3px solid $color2;
+	border-radius: 5px;
+	@include font(14,14,700);
+	padding: 6px;
+	width: 165px;
+	text-align: center;
+	cursor: pointer;
+	transition: none;
+	@include mq(lg){
+		width: 150px;
+	}
+	&::before,
+	&::after {
+		content: " ";
+		position: absolute;
+		display: block;
+		width: 3px;
+		height: 100%;
+		top:0;
+		background-image: linear-gradient(to $direction, $color1 0%, $color2 51%, $color1 100%);
+		background-size: 200%;
+	}
+	&::before {
+		right: 0;
+	}
+	&::after {
+		left: 0;
+	}
+	&:hover,
+	&:focus {
+		border-bottom: 3px solid $color1;
+		border-top: 3px solid $color2;
+		-webkit-background-clip: padding-box;
+		background-clip: padding-box;
+		-webkit-text-fill-color: #fff;
+		outline: 0;
+		&::before,
+		&::after {
+			background-position: $direction center;
+		}
+	}
+}

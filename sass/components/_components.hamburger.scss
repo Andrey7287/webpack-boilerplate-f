@@ -27,9 +27,6 @@ $button-transistion-duration: 0.3s;     // The transition duration
 		position: fixed;
 		top: 15px;
 		right: 15px;
-		.scroll &{
-			top: 3px;
-		}
 	}
 	position: relative;
 	overflow: hidden;
