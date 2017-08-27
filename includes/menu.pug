@@ -1,9 +1,9 @@
--var temp = '_temp';
 mixin menu(items, cls)
   ul(class=cls)
     each item, index in items
-      -var itemClass = +index ? cls+'__item' : cls+'__item '+cls+'__item_act'  
+      -var itemClass = +index ? cls+'__item' : cls+'__item act'  
       li(class=itemClass)
-        a(href= item.href).site-nav__link= item.title
+        a(href= item.href class=cls+'__link')
+          span= item.title
         if item.sub !== undefined
           +menu(item.sub, 'dropdown')

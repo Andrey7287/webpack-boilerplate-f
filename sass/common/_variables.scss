@@ -26,13 +26,14 @@ $serif: 'PT Serif', serif;
 $default-font: $open;
 $base-font-size: 16;
 $base-line-height: 26;
+$header-font: $default-font;
 
 /* Colors */
 $default-color: #333;
 $orange: #f1501d;
 $blue: #007fa0;
 $grey: #777;
-$header: $default-color;
+$header-color: $default-color;
 
 /* Links */
 $link: $orange;

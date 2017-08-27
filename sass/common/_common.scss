@@ -42,9 +42,24 @@ main {
 	flex-wrap: wrap;
 }
 .col {
+	$col: 8.33333%; // 1 col width
 	padding: 0 $gutter;
-	flex: 1;
+	flex: 0 1 auto;
+	min-height: 1px;
+	@for $i from 1 to 13 {
+		&-#{$i} {
+			@include basis($col*$i);
+			@each $breakpoint, $widths in $breakpoint-widths {
+				&-#{$breakpoint} {
+					@include mq($breakpoint) {
+						@include basis($col*$i);
+					}
+				}
+			}
+		}
+	}
 }
+
 
 // Normalize
 
@@ -82,8 +97,7 @@ a {
 	color: $link;
 	transition: all .2s ease-in;
 	&:active,
-	&:hover,
-	&:focus {
+	&:hover {
 		color: $link-hov;
 		text-decoration: none;
 	}
@@ -91,7 +105,10 @@ a {
 
 	}
 	&:focus {
-		outline: 1px solid $link;
+		outline-width: 1px;
+		outline-style: solid;
+		outline-color: $link;
+		outline-offset: 1px;
 	}
 }
 
@@ -132,4 +149,10 @@ abbr[title] {
 	border-bottom: none; /* 1 */
 	text-decoration: underline; /* 2 */
 	text-decoration: underline dotted; /* 2 */
+}
+table {
+	border-collapse: collapse;
+	td {
+		padding: 0;
+	}
 }

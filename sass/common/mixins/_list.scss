@@ -6,7 +6,6 @@
 		@include font($font-size,$line-height);
 		padding: 5px 0 5px 28px;
 		position: relative;
-		line-height: 1.25em;
 		&::before{
 			content: " ";
 			display: block;
@@ -15,7 +14,7 @@
 			background-color: $color;
 			position: absolute;
 			left: 0;
-			top: 0.9em;
+			top: 1em;
 		}
 	}
 }
